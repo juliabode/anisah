@@ -10,21 +10,23 @@
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation_left', 'menu_class' => 'nav navbar-nav'));
-        endif;
-      ?>
-    </nav>
+      <div class="row">
+        <?php
+          if (has_nav_menu('primary_navigation_left')) :
+            wp_nav_menu(array('theme_location' => 'primary_navigation_left', 'menu_class' => 'nav navbar-nav small-4 columns'));
+          endif;
+        ?>
 
-    <a class="brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+        <div class="logo-bg small-4 columns">
+          <a class="brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+        </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav'));
-        endif;
-      ?>
+        <?php
+          if (has_nav_menu('primary_navigation_right')) :
+            wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav small-4 columns'));
+          endif;
+        ?>
+      </div>
     </nav>
   </div>
 </header>

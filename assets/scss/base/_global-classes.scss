@@ -145,27 +145,9 @@ div.pos--init {
     margin-bottom: 40px;
 }
 
-/* Special Grey Box */
-
-.special-box {
-    background-color: $gray-lighter;
-    border: 1px solid $gray-light;
-
-    &:after, &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        background-color: $white;
-        height: 1px;
-        width: 100%;
-    }
-
-    &:before {
-        top: 0;
-    }
-
-    &:after {
-        bottom: 0;
-    }
+.white-bg {
+    background: $white;
+    background: rgba(255,255,255,0.85);
+    padding: 1.5em 2.5em;
+    border-radius: 3px;
 }

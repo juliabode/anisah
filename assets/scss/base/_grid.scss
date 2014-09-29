@@ -55,11 +55,12 @@
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
+    margin-bottom: 2.5em;
     width: 100%;
     float: left;
 
     @media (min-width: $bp-large) {
-        padding: 0 2.5em;
+        padding-right: 2.5em;
     }
 }
 

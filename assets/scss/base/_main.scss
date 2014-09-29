@@ -10,13 +10,15 @@ body {
     background-size: cover;
 
     @media all and (min-width: $bp-med) {
-        padding-top: $space-double;
+        /*padding-top: $space-double;*/
     }
 }
 
-.wrap {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    padding-bottom: 120px;
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -40px;
+    padding-bottom: 80px;
+    padding-top: 400px;
 }
 
 img {
