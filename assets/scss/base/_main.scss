@@ -1,0 +1,41 @@
+html, body {
+    font: 100%/1.5 $font;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background: url("../img/bg.jpg") fixed no-repeat;
+    background-size: cover;
+
+    @media all and (min-width: $bp-med) {
+        padding-top: $space-double;
+    }
+}
+
+.wrap {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    padding-bottom: 120px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: $red;
+
+    &:hover {
+        color: $red;
+        text-decoration: underline;
+    }
+}
+
+iframe {
+    max-width: 100%;
+}
+
+ul {
+    list-style-position: inside;
+}
