@@ -23,7 +23,7 @@
 
         <?php
           if (has_nav_menu('primary_navigation_right')) :
-            wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav small-4 columns'));
+            wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav small-4 columns end'));
           endif;
         ?>
       </div>
