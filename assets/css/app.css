@@ -6218,7 +6218,7 @@ header.banner {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1001;
+  z-index: 10001;
 }
 header.banner .columns {
   padding: 0 0.5rem;
@@ -6719,6 +6719,13 @@ a.menu-icon span {
   a.menu-icon {
     display: none;
   }
+}
+
+.slider {
+  margin: 0 auto 40px;
+}
+.slider .slide {
+  border: 10px solid rgba(255, 255, 255, 0.8);
 }
 
 .service-tile {
