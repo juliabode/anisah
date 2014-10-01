@@ -3472,7 +3472,7 @@ div.pos--init {
 }
 
 html, body {
-  font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font: 100%/1.5 Georgia, Arial, sans-serif;
   height: 100%;
 }
 
@@ -6439,7 +6439,7 @@ li.dropdown:hover .dropdown-menu {
   font-size: 12px;
   line-height: 16px;
   display: block;
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-family: Georgia, Arial, sans-serif;
 }
 .sidebar .widget_recent_entries img, .sidebar .recent-posts-extended img {
   padding: 3px;
@@ -6675,7 +6675,7 @@ ul.off-canvas-list li a:hover {
   }
 }
 ul.off-canvas-list .icon-home > a {
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-family: Georgia, Arial, sans-serif;
   line-height: 24px;
 }
 @media all and (min-width: 46.8em) {
