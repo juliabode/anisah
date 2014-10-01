@@ -22,10 +22,15 @@ header.banner {
 }
 
 .logo-bg {
-    background: url(../img/icon-background.png) no-repeat;
-    margin-top: -130px;
-    width: 300px;
+    background: url(../img/icon-background.png) center no-repeat;
+    background-size: 100% 80%;
+    margin-top: -135px;
     height: 330px;
+
+    @media all and (min-width: $bp-large-2) {
+        background-size: initial;
+        margin-top: -130px;
+    }
 }
 
 a.brand {
@@ -35,7 +40,7 @@ a.brand {
     height: 300px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 70%;
+    background-size: 65%;
     transition: background 300ms ease-in;
 }
 
@@ -57,19 +62,28 @@ nav {
     li {
         list-style: none;
         display: inline-block;
-        padding: 0 15px;
+        padding: 0 8px;
+
+        @media all and (min-width: $bp-large-2) {
+            padding: 0 15px;
+        }
     }
 
     a {
         color: $white;
         font-family: $font-secondary;
-        font-size: 26px;
+        font-size: 22px;
         line-height: 48px;
         font-weight: normal;
+
+        @media all and (min-width: $bp-large-2) {
+            font-size: 26px;
+        }
 
         &:hover, &.active {
             color: $pink;
             text-decoration: none;
         }
     }
+
 }
