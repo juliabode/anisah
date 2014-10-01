@@ -1,21 +1,21 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-secondary;
-  font-weight: normal;
+    font-family: $font-secondary;
+    font-weight: normal;
+    color: $pink;
 }
 
 h1 {
-  font-size: $font-size-largest;
-  line-height: $font-size-large-2;
+    font-size: $font-size-largest;
+    line-height: $font-size-large-2;
 }
 
 h2 {
-  font-size: $font-size-large-2;
+    font-size: $font-size-large-2;
 }
 
 h3 {
-  font-size: $font-size-large;
-  margin: 0;
-  color: #A50715;
+    font-size: $font-size-large;
+    margin: 0;
 }
 
 .page-header {

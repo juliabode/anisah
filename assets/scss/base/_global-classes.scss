@@ -150,4 +150,28 @@ div.pos--init {
     background: rgba(255,255,255,0.85);
     padding: 1.5em 2.5em;
     border-radius: 3px;
+
+    &.vines {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 60px;
+            height: 176px;
+            position: absolute;
+        }
+
+        &::before {
+            background: url(../img/vines.png) no-repeat;
+            top: -26px;
+            left: -22px;
+        }
+
+        &::after {
+            background: url(../img/vines-rotate.png) no-repeat;
+            bottom: -26px;
+            right: -22px;
+        }
+    }
 }

@@ -1,3 +1,12 @@
 .content p {
     margin: $space 0;
 }
+
+q {
+    font-style: italic;
+    padding: 15px 25px;
+    display: inline-block;
+    border: 3px double $pink;
+    margin: 15px;
+    background: rgba(230, 34, 116, 0.2);
+}

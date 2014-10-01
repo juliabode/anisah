@@ -3299,6 +3299,10 @@ header, footer, nav, section, article, hgroup, figure {
     padding-right: 0em;
   }
 }
+.admin-bar header.banner.sticky {
+  top: -122px;
+}
+
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
@@ -3447,6 +3451,25 @@ div.pos--init {
   padding: 1.5em 2.5em;
   border-radius: 3px;
 }
+.white-bg.vines {
+  position: relative;
+}
+.white-bg.vines::before, .white-bg.vines::after {
+  content: "";
+  width: 60px;
+  height: 176px;
+  position: absolute;
+}
+.white-bg.vines::before {
+  background: url(../img/vines.png) no-repeat;
+  top: -26px;
+  left: -22px;
+}
+.white-bg.vines::after {
+  background: url(../img/vines-rotate.png) no-repeat;
+  bottom: -26px;
+  right: -22px;
+}
 
 html, body {
   font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
@@ -3456,7 +3479,7 @@ html, body {
 body {
   position: relative;
   margin: 0;
-  background: url("../img/bg.jpg") fixed no-repeat;
+  background: url("../img/bg.jpg") center center fixed no-repeat;
   background-size: cover;
 }
 @media all and (min-width: 46.8em) {
@@ -3495,10 +3518,11 @@ ul {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Grand Hotel", sans-serif;
   font-weight: normal;
+  color: #e62274;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.75rem;
 }
 
@@ -3509,7 +3533,6 @@ h2 {
 h3 {
   font-size: 1.4375rem;
   margin: 0;
-  color: #A50715;
 }
 
 .page-header {
@@ -3518,6 +3541,15 @@ h3 {
 
 .content p {
   margin: 1rem 0;
+}
+
+q {
+  font-style: italic;
+  padding: 15px 25px;
+  display: inline-block;
+  border: 3px double #e62274;
+  margin: 15px;
+  background: rgba(230, 34, 116, 0.2);
 }
 
 input,

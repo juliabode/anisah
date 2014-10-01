@@ -11,7 +11,7 @@ Template Name: Homepage
 
 <div class="row">
     <div class="large-7 medium-7 small-12 column">
-        <div class="white-bg">
+        <div class="white-bg vines">
             <?php while (have_posts()) : the_post(); ?>
               <?php get_template_part('templates/page', 'header'); ?>
               <?php get_template_part('templates/content', 'page'); ?>

@@ -6,7 +6,7 @@ html, body {
 body {
     position: relative;
     margin: 0;
-    background: url("../img/bg.jpg") fixed no-repeat;
+    background: url("../img/bg.jpg") center center fixed no-repeat;
     background-size: cover;
 
     @media all and (min-width: $bp-med) {
