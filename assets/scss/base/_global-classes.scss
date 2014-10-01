@@ -153,6 +153,7 @@ div.pos--init {
 
     &.vines {
         position: relative;
+        min-height: 200px;
 
         &::before,
         &::after {

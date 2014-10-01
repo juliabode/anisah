@@ -22,6 +22,12 @@ Template Name: Homepage
     <div class="large-5 medium-5 small-12 column">
         <div class="white-bg">
             blub! Sidebar-Alarm!
+
+            <?php if (roots_display_sidebar()) : ?>
+              <aside class="sidebar" role="complementary">
+                <?php include roots_sidebar_path(); ?>
+              </aside><!-- /.sidebar -->
+            <?php endif; ?>
         </div>
 
     </div>

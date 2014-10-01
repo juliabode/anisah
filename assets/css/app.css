@@ -3453,6 +3453,7 @@ div.pos--init {
 }
 .white-bg.vines {
   position: relative;
+  min-height: 200px;
 }
 .white-bg.vines::before, .white-bg.vines::after {
   content: "";
