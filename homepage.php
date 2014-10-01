@@ -5,6 +5,11 @@ Template Name: Homepage
 ?>
 
 <div class="row">
+    <?php echo do_shortcode( '[fraction_slider]' ); ?>
+</div>
+
+
+<div class="row">
     <div class="large-7 medium-7 small-12 column">
         <div class="white-bg">
             <?php while (have_posts()) : the_post(); ?>
