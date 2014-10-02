@@ -3451,22 +3451,22 @@ div.pos--init {
   padding: 1.5em 2.5em;
   border-radius: 3px;
 }
-.white-bg.vines {
+.white-bg.vines, .white-bg.vines-left, .white-bg.vines-right {
   position: relative;
   min-height: 200px;
 }
-.white-bg.vines::before, .white-bg.vines::after {
+.white-bg.vines::before, .white-bg.vines::after, .white-bg.vines-left::before, .white-bg.vines-left::after, .white-bg.vines-right::before, .white-bg.vines-right::after {
   content: "";
   width: 60px;
   height: 176px;
   position: absolute;
 }
-.white-bg.vines::before {
+.white-bg.vines::before, .white-bg.vines-left::before {
   background: url(../img/vines.png) no-repeat;
   top: -26px;
   left: -22px;
 }
-.white-bg.vines::after {
+.white-bg.vines::after, .white-bg.vines-right::after {
   background: url(../img/vines-rotate.png) no-repeat;
   bottom: -26px;
   right: -22px;

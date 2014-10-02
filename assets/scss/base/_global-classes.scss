@@ -151,7 +151,9 @@ div.pos--init {
     padding: 1.5em 2.5em;
     border-radius: 3px;
 
-    &.vines {
+    &.vines,
+    &.vines-left,
+    &.vines-right {
         position: relative;
         min-height: 200px;
 
@@ -162,13 +164,19 @@ div.pos--init {
             height: 176px;
             position: absolute;
         }
+    }
 
+    &.vines,
+    &.vines-left {
         &::before {
             background: url(../img/vines.png) no-repeat;
             top: -26px;
             left: -22px;
         }
+    }
 
+    &.vines,
+    &.vines-right {
         &::after {
             background: url(../img/vines-rotate.png) no-repeat;
             bottom: -26px;
