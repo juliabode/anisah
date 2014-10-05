@@ -15,11 +15,11 @@ Template Name: 1 Spalte und Bilder
     </div>
 
     <div class="medium-4 small-12 column image-list">
-        <?php if( have_rows('2-col-pics_pictures') ) { ?>
+        <?php if( have_rows('1-col-pics_pictures') ) { ?>
         <ul>
-            <?php while ( have_rows('2-col-pics_pictures') ) { the_row(); ?>
+            <?php while ( have_rows('1-col-pics_pictures') ) { the_row(); ?>
                 <li>
-                    <?php $sub = get_sub_field('2-col-pics_picture'); ?>
+                    <?php $sub = get_sub_field('1-col-pics_picture'); ?>
                     <img src="<?php echo $sub['url']; ?>">
                 </li>
             <?php } ?>
