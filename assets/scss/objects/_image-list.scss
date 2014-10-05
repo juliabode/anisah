@@ -1,0 +1,10 @@
+.image-list {
+    li {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    img {
+        border: $border;
+    }
+}
