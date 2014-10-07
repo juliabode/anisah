@@ -12,11 +12,20 @@ header.banner {
     &.sticky {
         position: fixed;
         top: -151px;
+        max-height: 55px;
 
         a.brand {
             background-size: 50%;
             background-position: center 140px;
             transition: background 300ms ease-in;
+        }
+
+        nav {
+            margin-bottom: 0;
+        }
+
+        .row {
+            max-height: 55px;
         }
     }
 }
