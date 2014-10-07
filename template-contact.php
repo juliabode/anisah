@@ -11,12 +11,12 @@ Template Name: Kontakt
 
         <div class="row">
             <div class="small-12 medium-8 column">
-                <?php echo do_shortcode( '[contact-form-7 id="117" title="Kontaktformular"]' ); ?>
+                <?php get_template_part('templates/content', 'page'); ?>
+                <?php endwhile ?>
             </div>
 
             <div class="small-12 medium-4 column">
-                <?php get_template_part('templates/content', 'page'); ?>
-                <?php endwhile ?>
+                <?php the_field('contact_col2'); ?>
             </div>
         </ul>
     </div>
