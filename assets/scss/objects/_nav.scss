@@ -6,19 +6,23 @@
         display: inline-block;
         width: 0;
         height: 0;
-        vertical-align: top;
-        border-top: 4px solid $gray-dark;
+        vertical-align: middle;
+        border-top: 4px solid $white;
         border-right: 4px solid transparent;
         border-left: 4px solid transparent;
-        border-bottom-color: $gray-dark;
-        margin: 4px 0 0 2px;
+        border-bottom-color: $white;
+        margin: -2px 0 0 4px;
     }
+}
+
+li.dropdown:hover > a {
+    color: $pink;
 }
 
 li.dropdown:hover .caret,
 li.dropdown.active .caret {
-    border-top-color: $red;
-    border-bottom-color: $red;
+    border-top-color: $pink;
+    border-bottom-color: $pink;
 }
 
 .dropup, .dropdown {
@@ -28,6 +32,7 @@ li.dropdown.active .caret {
 .dropdown-menu {
     margin-left: 0 !important;
     display: block;
+    padding: 0;
 
     @media all and (min-width: $bp-med) {
         position: absolute;
@@ -38,27 +43,16 @@ li.dropdown.active .caret {
         float: left;
         -moz-background-clip: padding;
         background-clip: padding-box;
+        padding-top: 10px;
 
         li {
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: $purple;
+
         }
     }
 }
 
 li.dropdown:hover .dropdown-menu {
     display: block;
-}
-
-.nav-main .menu-line {
-    border-left: 35px inset rgba(255, 255, 255, 0);
-    border-right: 35px inset rgba(255, 255, 255, 0);
-    border-bottom: 5px solid $red;
-    position: absolute;
-    bottom: 0;
-}
-
-.social-nav {
-    margin: 7px 0;
-    min-height: 35px;
 }
