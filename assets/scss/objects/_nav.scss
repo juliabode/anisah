@@ -15,7 +15,8 @@
     }
 }
 
-li.dropdown:hover > a {
+li.dropdown:hover > a,
+li.active > a {
     color: $pink;
 }
 
