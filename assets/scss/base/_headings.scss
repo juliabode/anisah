@@ -6,11 +6,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: $font-size-largest;
-    line-height: $font-size-large-2;
+    line-height: $font-size-largest-2;
 }
 
 h2 {
-    font-size: $font-size-large-2;
+    font-size: $font-size-largest;
+    line-height: $font-size-largest-2;
 }
 
 h3 {
@@ -18,6 +19,7 @@ h3 {
     margin: 0;
 }
 
-.page-header {
+.page-header,
+.entry-title {
     margin: $pad 0;
 }
