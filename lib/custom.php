@@ -61,7 +61,7 @@ update_option( 'medium_size_h', '9999' );
 
 function add_lightbox_rel( $html ) {
     $pattern = '/<a(.*?)href="(.*?).(bmp|gif|jpeg|jpg|png)"(.*?)>/i';
-    $replacement = '<a$1href="$2.$3" rel=\'lightbox\'$4>';
+    $replacement = '<a$1href="$2.$3" rel=\'lightbox[pp_gal]\'$4>';
     $html = preg_replace( $pattern, $replacement, $html );
    return $html;
 }

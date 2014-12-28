@@ -45,7 +45,7 @@ Follow variables are useable :
             <div class="ngg-gallery-thumbnail" >
                 <a href="<?php echo nextgen_esc_url($image->imageURL) ?>"
                    title="<?php echo esc_attr($image->description) ?>"
-                   rel="lightbox"
+                   rel="lightbox[pp_gal]"
                    <?php echo $image->thumbcode ?> >
                     <?php if ( !$image->hidden ) { ?>
                     <img title="<?php echo esc_attr($image->alttext) ?>" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
