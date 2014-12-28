@@ -27,7 +27,7 @@ $brand-linkedin: #217bc1;
 
 //Typography
 //$font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font : Georgia, Arial, sans-serif;
+$font : Helvetica, Georgia, Arial, sans-serif;
 $font-secondary : 'Grand Hotel', sans-serif;
 
 $font-size-norm : 1rem;
@@ -37,6 +37,7 @@ $font-size-sm : 0.75rem;
 $font-size-large : 1.4375rem;
 $font-size-large-2 : 1.75rem;
 $font-size-largest : 2.5rem;
+$font-size-largest-2 : 2.75rem;
 
 //Layout
 $max-width: 64rem;
@@ -68,7 +69,7 @@ $border : 5px solid rgba(255,255,255,0.8);
 //Breakpoints
 $bp-small : 24em;
 $bp-small-2 : 29.75em;
-$bp-small-3 : 39.8em;
+$bp-small-3 : 39.6em;
 $bp-med : 46.8em;
 $bp-med-2 : 48em;
 $bp-large : 50em;

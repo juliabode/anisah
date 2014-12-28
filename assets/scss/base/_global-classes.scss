@@ -63,8 +63,9 @@
 
 /* Display Classes */
 .hide-small {
-    @media all and (max-width: $bp-med) {
-        display: none;
+    display: none;
+    @media all and (min-width: $bp-med) {
+        display: block;
     }
 }
 
@@ -148,8 +149,12 @@ div.pos--init {
 .white-bg {
     background: $white;
     background: rgba(255,255,255,0.85);
-    padding: 1.5em 2.5em;
+    padding: 1.5em 1em;
     border-radius: 3px;
+
+    @media all and (min-width: $bp-med) {
+        padding: 1.5em 2.5em;
+    }
 
     &.vines,
     &.vines-left,

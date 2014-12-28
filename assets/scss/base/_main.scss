@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    position: relative;
+    /*position: relative; Fucks up admin panel on mobile :( */
     margin: 0;
     background: url("../img/bg.jpg") center center fixed no-repeat;
     background-size: cover;
@@ -16,9 +16,12 @@ body {
 
 .page-wrap {
     min-height: 100%;
-    margin-bottom: -40px;
+    margin-bottom: -44px;
     padding-bottom: 80px;
-    padding-top: 400px;
+
+    @media all and (min-width: $bp-med) {
+        padding-top: 400px;
+    }
 }
 
 img {
@@ -26,10 +29,10 @@ img {
 }
 
 a {
-    color: $red;
+    color: $pink;
 
     &:hover {
-        color: $red;
+        color: $pink;
         text-decoration: underline;
     }
 }
@@ -40,4 +43,16 @@ iframe {
 
 ul {
     list-style-position: inside;
+}
+
+/* Lightbox on top */
+
+div {
+    &.pp_pic_holder {
+        z-index: 10003;
+    }
+
+    &.pp_overlay {
+        z-index: 10002;
+    }
 }
