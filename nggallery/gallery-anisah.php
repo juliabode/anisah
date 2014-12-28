@@ -77,7 +77,7 @@ Follow variables are useable :
             foreach( $album->gallery_ids as $galleryid ){
                 $gallery = $nggdb->find_gallery($galleryid);
                 $galleries[$galleryid]['title'] = $gallery->title;
-                $galleries[$galleryid]['url'] = get_bloginfo('url') . '/portfolio/?album=all&gallery=' . $galleryid;
+                $galleries[$galleryid]['url'] = get_bloginfo('url') . '/galerie/portfolio/?album=all&gallery=' . $galleryid;
             }
 
             echo '<ul class="sidebar-gallery-link">';
