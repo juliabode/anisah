@@ -2,10 +2,7 @@
     -webkit-backface-visibility: hidden;
     width: 100%;
     overflow: hidden;
-
-    @media all and (min-width: $bp-med) {
-        padding-top: $space;
-    }
+    min-height: 100%;
 }
 
 .inner-wrap {
@@ -17,6 +14,7 @@
     -ms-transition: -ms-transform 500ms ease;
     -o-transition: -o-transform 500ms ease;
     transition: transform 500ms ease;
+    height: 100%;
 
     &:before, &:after {
         content: " ";
@@ -37,9 +35,9 @@
     height: 100%;
     position: absolute;
     overflow-y: auto;
-    background: #333333;
+    background: rgba(255, 255, 255, 0.85);
     z-index: 1001;
-    box-sizing: content-box;
+    border-right: 5px solid #7f0858;
     -webkit-transform: translate3d(-100%, 0, 0);
     -moz-transform: translate3d(-100%, 0, 0);
     -ms-transform: translate3d(-100%, 0, 0);
@@ -63,127 +61,72 @@
         -o-transform: none;
         transform: none;
         background: rgba(0, 0, 0, 0);
-        width: auto;
+        border: none;
+        width: 33.33333%;
         overflow-y: initial;
     }
 }
 
+.move-right li.dropdown:hover > a {
+    color: inherit;
+}
+
 ul.off-canvas-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
 
     > li a {
+        background: rgba(255, 255, 255, 0.5);
         padding: 0.3rem 0.9375rem;
-        color: #999999;
+        color: #333;
         text-transform: uppercase;
-        background: #444444;
-        border-top: 1px solid #5e5e5e;
         border-bottom: none;
         margin: 0;
     }
 
     li a {
         display: block;
-        padding: 0.66667rem;
-        color: rgba(255, 255, 255, 0.7);
-        border-bottom: 1px solid #262626;
+        padding: 0.8rem;
+        background-color: rgb(223, 181, 202);
+        border-bottom: 1px solid $purple;
+        font-family: $font;
 
         &:hover {
             text-decoration: none;
+            color: #333;
         }
 
+        @media all and (min-width: $bp-large-2) {
+            font-size: 26px;
+        }
+    }
+}
+
+ul.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    float: none;
+
+    > li a {
         @media all and (min-width: $bp-med) {
-            font-size: 18px;
-            color: #333333;
-            padding: 5px 8px;
-            line-height: 24px;
-            font-family: 'Cuprum', sans-serif;
-            margin: 34px 5px;
-            border: none;
-            background: none;
+            background: transparent;
+            color: $white;
+            font-family: $font-secondary;
+            font-size: 22px;
+            line-height: 48px;
+            font-weight: normal;
             text-transform: none;
-        }
-    }
+            padding: 0;
+            border: none;
 
-    @media all and (min-width: $bp-med) {
-        float: right;
-        margin-bottom: 0;
-        position: relative;
-
-        ul.dropdown-menu {
-            box-shadow: 0px 2px 6px rgba(0,0,0,.75);
-            border-top: 3px solid $red;
-            list-style: none;
-            margin-top: -20px;
-
-            li {
-
-                a {
-                    margin: 0;
-                    text-align: center;
-                    padding: 8px 12px;
-                    line-height: 24px;
-                    list-style: none;
-                    white-space: nowrap;
-                }
-
-                &.active a,
-                &:hover a {
-                    background-color: $red;
-                    background-image: none;
-                    color: $white;
-                }
-            }
-        }
-    }
-
-    .active > a,
-    a.hover,
-    li:hover > a {
-        @media all and (min-width: $bp-med) {
-            color: #A50715;
-            background-color: transparent;
-        }
-    }
-
-    > li {
-        @media all and (min-width: $bp-med) {
-            float: left;
-
-            a {
-                font-size: 15px;
-                color: #333333;
-                padding: 10px 0 10px 9px;
-                line-height: 10px;
-                margin: 10px 5px 28px;
-            }
-        }
-
-        @media all and (min-width: $bp-med-2) {
-            a {
-                font-size: 17px;
-                padding: 10px 0 10px 7px;
+            &:hover,
+            &.active {
+                color: $pink;
+                text-decoration: none;
             }
         }
 
         @media all and (min-width: $bp-large-2) {
-            a {
-                font-size: 18px;
-                padding: 10px 0 10px 15px;
-            }
-        }
-    }
-
-    .icon-home {
-
-        > a {
-            font-family: $font;
-            line-height: 24px;
-
-            @media all and (min-width: $bp-med) {
-                text-indent: -99999px;
-            }
+            font-size: 26px;
         }
     }
 }
@@ -247,7 +190,7 @@ a.menu-icon {
     line-height: 1.83333rem;
     padding: 0;
     color: #FFF;
-    position: relative;
+    position: absolute;
     cursor: pointer;
 
     span {
@@ -256,9 +199,10 @@ a.menu-icon {
         width: 0.88889rem;
         height: 0;
         left: 0.72222rem;
-        top: 0.27778rem;
+        top: 8px;
         -webkit-box-shadow: 1px 10px 1px 1px #FFF, 1px 16px 1px 1px #FFF, 1px 22px 1px 1px #FFF;
         box-shadow: 0 10px 0 1px #FFF, 0 16px 0 1px #FFF, 0 22px 0 1px #FFF;
+        z-index: 5;
     }
 
     @media all and (min-width: $bp-med) {

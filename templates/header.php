@@ -1,29 +1,28 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
       <div class="row">
-        <?php
-          if (has_nav_menu('primary_navigation_left')) :
-            wp_nav_menu(array('theme_location' => 'primary_navigation_left', 'menu_class' => 'nav navbar-nav small-4 columns'));
-          endif;
-        ?>
+        <div class="left-off-canvas-menu medium-4 columns">
+          <?php
+            if (has_nav_menu('primary_navigation_left')) :
+              wp_nav_menu(array('theme_location' => 'primary_navigation_left', 'menu_class' => 'nav navbar-nav off-canvas-list'));
+            endif;
+            if (has_nav_menu('primary_navigation_right')) :
+              wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav hide-large hide-med end off-canvas-list'));
+            endif;
+          ?>
+        </div>
 
-        <div class="logo-bg small-4 columns">
+        <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+
+        <div class="logo-bg small-offset-1 small-10 medium-4 columns">
           <a class="brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
         </div>
 
         <?php
           if (has_nav_menu('primary_navigation_right')) :
-            wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav small-4 columns end'));
+            wp_nav_menu(array('theme_location' => 'primary_navigation_right', 'menu_class' => 'nav navbar-nav small-4 columns hide-small end'));
           endif;
         ?>
       </div>

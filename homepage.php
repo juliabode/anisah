@@ -5,7 +5,7 @@ Template Name: Homepage
 ?>
 
 <div class="row">
-    <?php echo do_shortcode( '[fraction_slider]' ); ?>
+    <div class="column"><?php echo do_shortcode( '[fraction_slider]' ); ?></div>
 </div>
 
 

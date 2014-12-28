@@ -1,5 +1,12 @@
 .admin-bar {
-    header.banner.sticky {
-        top: -122px;
+    header.banner {
+        z-index: 499;
+
+        @media all and (min-width: $bp-med) {
+            &.sticky {
+                top: -98px;
+                z-index: 10002;
+            }
+        }
     }
 }

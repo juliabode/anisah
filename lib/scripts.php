@@ -24,7 +24,8 @@ function roots_scripts() {
       'css'       => '/assets/css/app.css',
       'js'        => '/assets/js/scripts.js',
       //'modernizr' => '/assets/vendor/modernizr/modernizr.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js',
+      'foundation' => '/assets/js/plugins/foundation.min.js'
     );
   /*} else {
     //$get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
@@ -38,6 +39,7 @@ function roots_scripts() {
   }*/
 
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+  wp_enqueue_style('fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', false, null);
 
   /**
    * jQuery is loaded using the same method from HTML5 Boilerplate:
@@ -47,6 +49,7 @@ function roots_scripts() {
   if (!is_admin() && current_theme_supports('jquery-cdn')) {
     wp_deregister_script('jquery');
     wp_register_script('jquery', $assets['jquery'], array(), null, false);
+    wp_register_script('foundation', get_template_directory_uri() . $assets['foundation'], false, null, true);
     add_filter('script_loader_src', 'roots_jquery_local_fallback', 10, 2);
   }
 
@@ -56,6 +59,7 @@ function roots_scripts() {
 
   //wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
   wp_enqueue_script('jquery');
+  wp_enqueue_script('foundation', get_template_directory_uri() . $assets['foundation'], false, null, true);
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);

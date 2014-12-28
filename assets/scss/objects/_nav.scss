@@ -17,7 +17,9 @@
 
 li.dropdown:hover > a,
 li.active > a {
-    color: $pink;
+    @media all and (min-width: $bp-med) {
+        color: $pink !important;
+    }
 }
 
 li.dropdown:hover .caret,
