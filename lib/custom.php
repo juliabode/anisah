@@ -48,8 +48,24 @@ add_action('admin_head', 'add_admin_area_favicon');
 /**
  * Add new image size for homepage service tiles
  */
-/*
+
 if ( function_exists( 'add_image_size' ) ) {
-    add_image_size( 'service-tile-thumb', 250, 9999 ); //250 pixels wide (and unlimited height)
-    add_image_size( 'member-fotos', 450, 350, true );
-}*/
+    //add_image_size( 'medium', 568, 9999 ); //250 pixels wide (and unlimited height)
+    //add_image_size( 'member-fotos', 450, 350, true );
+}
+
+update_option( 'medium_size_w', '568' );
+update_option( 'medium_size_h', '9999' );
+
+/* Insert rel="lightbox" attribute in every image link in posts */
+
+function add_lightbox_rel( $html ) {
+    $pattern = '/<a(.*?)href="(.*?).(bmp|gif|jpeg|jpg|png)"(.*?)>/i';
+    $replacement = '<a$1href="$2.$3" rel=\'lightbox\'$4>';
+    $html = preg_replace( $pattern, $replacement, $html );
+   return $html;
+}
+add_filter( 'image_send_to_editor', 'add_lightbox_rel', 10 );
+
+// Use shortcodes in text widgets.
+add_filter( 'widget_text', 'do_shortcode' );
