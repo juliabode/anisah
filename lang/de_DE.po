@@ -1,0 +1,330 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: roots\n"
+"POT-Creation-Date: 2014-12-24 11:43+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Philipp Meier <phimei@gmx.ch>\n"
+"Language-Team: roots\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+"Es tut uns leid aber die Seite die du angucken wolltest existiert nicht."
+
+#: 404.php:7
+msgid "It looks like this was the result of either:"
+msgstr "Es sieht aus als sei dies das Ergebnis von entweder:"
+
+#: 404.php:9
+msgid "a mistyped address"
+msgstr "einer fehlerhaft eingegebenen Adresse"
+
+#: 404.php:10
+msgid "an out-of-date link"
+msgstr "einem veralteten Link"
+
+#: base.php:6
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+"Du benutzt einen <strong>veralteten</strong> Browser. Bitte <a href=\"http://"
+"browsehappy.com/\">aktualisiere deinen Browser</a> um deine Erfahrung zu "
+"verbessern."
+
+#: functions.php:31
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: index.php:6
+msgid "Sorry, no results were found."
+msgstr "Es tut uns leid aber es wurden keine Ergebnisse gefunden."
+
+#: index.php:18
+msgid "Older posts"
+msgstr "Ältere Artikel"
+
+#: index.php:19
+msgid "Newer posts"
+msgstr "Neuere Artikel"
+
+#: lib/activation.php:28 lib/activation.php:29
+msgid "Theme Activation"
+msgstr "Theme Aktivierung"
+
+#: lib/activation.php:50
+#, php-format
+msgid "%s Theme Activation"
+msgstr "%s Theme Aktivierung"
+
+#: lib/activation.php:52
+msgid ""
+"These settings are optional and should usually be used only on a fresh "
+"installation"
+msgstr ""
+
+#: lib/activation.php:59 lib/activation.php:62
+msgid "Create static front page?"
+msgstr "Statische Startseite anlegen?"
+
+#: lib/activation.php:64 lib/activation.php:76 lib/activation.php:88
+#: lib/activation.php:100
+msgid "Yes"
+msgstr "Ja"
+
+#: lib/activation.php:65 lib/activation.php:77 lib/activation.php:89
+#: lib/activation.php:101
+msgid "No"
+msgstr "Nein"
+
+#: lib/activation.php:67
+msgid "Create a page called Home and set it to be the static front page"
+msgstr ""
+"Erstelle eine Home genannte Seite und mache sie zur statischen Startseite"
+
+#: lib/activation.php:71
+msgid "Change permalink structure?"
+msgstr "Permalinkstruktur ändern?"
+
+#: lib/activation.php:74
+msgid "Update permalink structure?"
+msgstr "Permalinkstruktur aktualisieren?"
+
+#: lib/activation.php:79
+msgid "Change permalink structure to /&#37;postname&#37;/"
+msgstr "Ändere die Permalinkstruktur zu /&#37;postname&#37;/"
+
+#: lib/activation.php:83 lib/activation.php:86
+msgid "Create navigation menu?"
+msgstr "Navigationsmenü anlegen?"
+
+#: lib/activation.php:91
+msgid "Create the Primary Navigation menu and set the location"
+msgstr "Lege das primäre Navigationsmenü an und lege den Ort fest"
+
+#: lib/activation.php:95 lib/activation.php:98
+msgid "Add pages to menu?"
+msgstr "Seiten zum Menü hinzufügen?"
+
+#: lib/activation.php:103
+msgid "Add all current published pages to the Primary Navigation"
+msgstr ""
+"Füge alle derzeit veröffentlichten Seiten zur primären Navigation hinzu"
+
+#: lib/activation.php:126 lib/activation.php:147
+msgid "Home"
+msgstr ""
+
+#: lib/activation.php:173 lib/activation.php:176 lib/activation.php:190
+msgid "Primary Navigation"
+msgstr "Primäre Navigation"
+
+#: lib/extras.php:6
+msgid "Continued"
+msgstr "Weiterlesen"
+
+#: lib/init.php:13
+#, fuzzy
+msgid "Primary Navigation Left"
+msgstr "Primäre Navigation"
+
+#: lib/init.php:14
+#, fuzzy
+msgid "Primary Navigation Right"
+msgstr "Primäre Navigation"
+
+#: lib/init.php:41
+msgid "Primary"
+msgstr "Primär"
+
+#: lib/init.php:50
+msgid "News"
+msgstr ""
+
+#: lib/titles.php:10
+msgid "Latest Posts"
+msgstr "Neuste Artikel"
+
+#: lib/titles.php:19
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Tägliche Archive: %s"
+
+#: lib/titles.php:21
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Monatliche Archive: %s"
+
+#: lib/titles.php:23
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Jährliche Archive: %s"
+
+#: lib/titles.php:26
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Autorarchive: %s"
+
+#: lib/titles.php:31
+#, php-format
+msgid "Search Results for %s"
+msgstr "Suchergebnisse für %s"
+
+#: lib/titles.php:33
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: templates/comment.php:3
+msgid "wrote at "
+msgstr "schrieb am"
+
+#: templates/comment.php:4
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: templates/comment.php:5
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: templates/comment.php:9
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf Moderation."
+
+#: templates/comments.php:9
+#, php-format
+msgid "One Response"
+msgid_plural "%1$s Responses"
+msgstr[0] "Eine Antwort"
+msgstr[1] "%1$s Antworten"
+
+#: templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: templates/comments.php:30 templates/comments.php:35
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: templates/comments.php:42
+msgid "Leave a Reply"
+msgstr "Hinterlasse eine Antwort"
+
+#: templates/comments.php:42
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Hinterlasse eine Antwort auf %s"
+
+#: templates/comments.php:45
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Du musst <a href=\"%s\">angemeldet</a> sein, um einen Kommentar zu erstellen."
+
+#: templates/comments.php:50
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr "Angemeldet als <a href=\"%s/wp-admin/profile.php\">%s</a>."
+
+#: templates/comments.php:51
+msgid "Log out of this account"
+msgstr "Melde dich von diesem Benutzerkonto ab."
+
+#: templates/comments.php:51
+msgid "Log out &raquo;"
+msgstr "Abmelden  &raquo;"
+
+#: templates/comments.php:55
+msgid "Name"
+msgstr "Name"
+
+#: templates/comments.php:55 templates/comments.php:59
+msgid " (required)"
+msgstr "(benötigt)"
+
+#: templates/comments.php:59
+msgid "Email (will not be published)"
+msgstr "E-Mail (wird nicht veröffentlicht)"
+
+#: templates/comments.php:63
+msgid "Website"
+msgstr "Webseite"
+
+#: templates/comments.php:68
+msgid "Comment"
+msgstr "Kommentar"
+
+#: templates/comments.php:71
+msgid "Submit Comment"
+msgstr "Kommentar abschicken"
+
+#: templates/content-single.php:14
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: templates/entry-meta.php:3
+msgid "By"
+msgstr "Von"
+
+#: templates/searchform.php:2
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: templates/searchform.php:4 templates/searchform.php:6
+msgid "Search"
+msgstr "Suche"
+
+#~ msgid "Footer"
+#~ msgstr "Fußzeile"
+
+#~ msgid "Change uploads folder?"
+#~ msgstr "Ordner für hochgeladene Dateien ändern?"
+
+#~ msgid "Update uploads folder?"
+#~ msgstr "Ordner für hochgeladene Dateien aktualisieren?"
+
+#~ msgid "Change uploads folder to /media/ instead of /wp-content/uploads/"
+#~ msgstr ""
+#~ "Ändere Ordner für hochgeladene Dateien von /wp-content/uploads/ zu /media/"
+
+#~ msgid "Use this widget to add a vCard"
+#~ msgstr "Benutze dieses Widget um eine vCard hinzuzufügen"
+
+#~ msgid "Roots: vCard"
+#~ msgstr "Roots: vCard"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "Comments"
+#~ msgstr "Kommentare"
+
+#~ msgid " *"
+#~ msgstr " *"
+
+#~ msgid "Imprint"
+#~ msgstr "Impressum"
+
+#~ msgid "d. F Y"
+#~ msgstr "d. F Y"
+
+#~ msgid "One Response to &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Eine Reaktion auf &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s Reaktionen auf &ldquo;%2$s&rdquo;"
