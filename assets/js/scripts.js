@@ -15,7 +15,14 @@ jQuery(document).ready( function($) {
         }
     }
 
-    $(window).scroll(sticky);
+    jQuery(window).scroll(sticky);
     sticky();
+
+    jQuery('section.widget:first-child h3').addClass('active');
+
+    jQuery('section.widget h3').click( function() {
+        jQuery('section.widget h3').removeClass('active');
+        jQuery(this).addClass('active');
+    })
 
 });

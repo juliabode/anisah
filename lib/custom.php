@@ -57,6 +57,13 @@ if ( function_exists( 'add_image_size' ) ) {
 update_option( 'medium_size_w', '568' );
 update_option( 'medium_size_h', '9999' );
 
+set_post_thumbnail_size('150', '100', true);
+
+function remove_img_attr ($html) {
+    return preg_replace('/(width|height)="\d+"\s/', "", $html);
+}
+add_filter( 'post_thumbnail_html', 'remove_img_attr' );
+
 /* Insert rel="lightbox" attribute in every image link in posts */
 
 function add_lightbox_rel( $html ) {
