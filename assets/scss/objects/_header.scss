@@ -21,7 +21,7 @@ header.banner {
     &.sticky {
         @media all and (min-width: $bp-med) {
             position: fixed;
-            top: -130px;
+            top: -150px;
             max-height: 55px;
 
             a.brand {
@@ -95,7 +95,7 @@ a.brand {
 
 nav {
     height: 50px;
-    margin: 130px 0 160px;
+    margin: 150px 0 160px;
     background: $purple;
     border-top: 1px dashed rgba(10, 10, 0, 0.3);
     border-bottom: 1px dashed rgba(10, 10, 0, 0.3);
