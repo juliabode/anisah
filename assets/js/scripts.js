@@ -15,14 +15,20 @@ jQuery(document).ready( function($) {
         }
     }
 
+    function activeTab(tab) {
+        var minTabHeight = jQuery(tab).next('div').outerHeight();
+
+        jQuery('section.widget > h3').removeClass('active');
+        jQuery(tab).addClass('active');
+        jQuery(tab).parents('aside').css('min-height', minTabHeight + 53);
+    }
+
     jQuery(window).scroll(sticky);
     sticky();
 
-    jQuery('section.widget:first-child h3').addClass('active');
-
-    jQuery('section.widget h3').click( function() {
-        jQuery('section.widget h3').removeClass('active');
-        jQuery(this).addClass('active');
+    activeTab('section.widget:first-child > h3');
+    jQuery('section.widget > h3').click( function() {
+        activeTab(this);
     })
 
 });
