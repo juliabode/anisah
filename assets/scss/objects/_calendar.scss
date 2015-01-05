@@ -1,0 +1,92 @@
+.gce-page-grid {
+    background: $gray-lighter;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    padding: 25px;
+
+    .gce-calendar {
+        border: none;
+
+        .gce-caption {
+            padding: 5px 20px 10px;
+            height: 70px;
+            position: relative;
+            border-top: 5px solid $purple;
+            border-bottom: 1px solid $gray-light;
+            margin: -25px -25px 25px;
+            background: $white;
+            box-shadow: 0 1px rgba(255,255,255,0.8);
+
+            .gce-prev {
+                &::before {
+                    content: "\f100";
+                }
+
+                a {
+                    margin-left: -10px;
+                }
+
+            }
+
+            .gce-next {
+                &::before {
+                    content: "\f101";
+                }
+
+                a {
+                    margin-left: -10px;
+                }
+
+            }
+
+            .gce-prev,
+            .gce-next {
+                font: normal normal normal 14px/1 FontAwesome;
+                line-height: 60px;
+                color: $pink;
+
+                a {
+                    text-indent: -99999px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    width: 30px;
+                }
+            }
+
+            .gce-month-title {
+                font-weight: normal;
+                line-height: 60px;
+            }
+        }
+
+        th {
+            border: none;
+            color: $pink;
+        }
+
+        td[class*="gce-"] {
+            background: $white;
+        }
+
+        .gce-day-number {
+            font-size: 24px;
+            color: $gray;
+        }
+
+        td[class*="gce-has-events"] {
+            background: rgb(230, 34, 116);
+
+            .gce-day-number {
+                color: $white;
+            }
+        }
+
+        td[class*="gce-today"] {
+            background: $gray-light;
+        }
+    }
+}
+
+.qtip-content {
+    font-size: 14px;
+}
