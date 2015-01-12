@@ -14,77 +14,79 @@ Follow variables are useable :
 ?>
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?>
 
-<div class="column small-12 medium-8">
-    <?php if (!empty ($gallery)) : ?>
+<div class="row">
+    <div class="column small-12 medium-8">
+        <?php if (!empty ($gallery)) : ?>
 
-    <div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
+        <div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
 
-    <?php if ($gallery->show_slideshow) { ?>
-        <!-- Slideshow link -->
-        <div class="slideshowlink">
-            <a class="slideshowlink" href="<?php echo nextgen_esc_url($gallery->slideshow_link) ?>">
-                <?php echo $gallery->slideshow_link_text ?>
-            </a>
-        </div>
-    <?php } ?>
-
-    <?php if ($gallery->show_piclens) { ?>
-        <!-- Piclense link -->
-        <div class="piclenselink">
-            <a class="piclenselink" href="<?php echo nextgen_esc_url($gallery->piclens_link) ?>">
-                <?php _e('[View with PicLens]','nggallery'); ?>
-            </a>
-        </div>
-    <?php } ?>
-
-    <ul class="small-block-grid-2 medium-block-grid-3">
-        <!-- Thumbnails -->
-        <?php foreach ( $images as $image ) : ?>
-        
-        <li id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box" <?php echo $image->style ?> >
-            <div class="ngg-gallery-thumbnail" >
-                <a href="<?php echo nextgen_esc_url($image->imageURL) ?>"
-                   title="<?php echo esc_attr($image->description) ?>"
-                   rel="lightbox[pp_gal]"
-                   <?php echo $image->thumbcode ?> >
-                    <?php if ( !$image->hidden ) { ?>
-                    <img title="<?php echo esc_attr($image->alttext) ?>" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
-                    <?php } ?>
+        <?php if ($gallery->show_slideshow) { ?>
+            <!-- Slideshow link -->
+            <div class="slideshowlink">
+                <a class="slideshowlink" href="<?php echo nextgen_esc_url($gallery->slideshow_link) ?>">
+                    <?php echo $gallery->slideshow_link_text ?>
                 </a>
             </div>
-        </li>
+        <?php } ?>
 
-        <?php endforeach; ?>
-    <ul>
-        
-        <!-- Pagination -->
-        <?php echo $pagination ?>
+        <?php if ($gallery->show_piclens) { ?>
+            <!-- Piclense link -->
+            <div class="piclenselink">
+                <a class="piclenselink" href="<?php echo nextgen_esc_url($gallery->piclens_link) ?>">
+                    <?php _e('[View with PicLens]','nggallery'); ?>
+                </a>
+            </div>
+        <?php } ?>
 
+        <ul class="small-block-grid-2 medium-block-grid-3">
+            <!-- Thumbnails -->
+            <?php foreach ( $images as $image ) : ?>
+            
+            <li id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box" <?php echo $image->style ?> >
+                <div class="ngg-gallery-thumbnail" >
+                    <a href="<?php echo nextgen_esc_url($image->imageURL) ?>"
+                       title="<?php echo esc_attr($image->description) ?>"
+                       rel="lightbox[pp_gal]"
+                       <?php echo $image->thumbcode ?> >
+                        <?php if ( !$image->hidden ) { ?>
+                        <img title="<?php echo esc_attr($image->alttext) ?>" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
+                        <?php } ?>
+                    </a>
+                </div>
+            </li>
+
+            <?php endforeach; ?>
+        <ul>
+            
+            <!-- Pagination -->
+            <?php echo $pagination ?>
+
+        </div>
+
+        <?php endif; ?>
     </div>
 
-    <?php endif; ?>
-</div>
+    <div class="column small-12 medium-4">
+        <div class="white-bg">
 
-<div class="column small-12 medium-4">
-    <div class="white-bg">
+            <?php echo do_shortcode('[album id=1 template=anisah]'); ?>
+            <?php global $nggdb;
+                $galleries = array();
 
-        <?php echo do_shortcode('[album id=1 template=anisah]'); ?>
-        <?php global $nggdb;
-            $galleries = array();
+                $album = $nggdb->find_album(1);
 
-            $album = $nggdb->find_album(1);
+                foreach( $album->gallery_ids as $galleryid ){
+                    $gallery = $nggdb->find_gallery($galleryid);
+                    $galleries[$galleryid]['title'] = $gallery->title;
+                    $galleries[$galleryid]['url'] = get_bloginfo('url') . '/galerie/portfolio/?album=all&gallery=' . $galleryid;
+                }
 
-            foreach( $album->gallery_ids as $galleryid ){
-                $gallery = $nggdb->find_gallery($galleryid);
-                $galleries[$galleryid]['title'] = $gallery->title;
-                $galleries[$galleryid]['url'] = get_bloginfo('url') . '/galerie/portfolio/?album=all&gallery=' . $galleryid;
-            }
-
-            echo '<ul class="sidebar-gallery-link">';
-            foreach($galleries as $category){
-                echo '<li><a href="' . $category['url'] . '">' . $category['title'] . '</a></li>';
-            }
-            echo '</ul>';
-        ?>
+                echo '<ul class="sidebar-gallery-link">';
+                foreach($galleries as $category){
+                    echo '<li><a href="' . $category['url'] . '">' . $category['title'] . '</a></li>';
+                }
+                echo '</ul>';
+            ?>
+        </div>
     </div>
 </div>
