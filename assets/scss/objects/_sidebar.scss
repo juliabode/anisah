@@ -1,16 +1,123 @@
-section.widget {
-    position: relative;
-    margin-bottom: 15px;
+.sidebar-home {
+    section.widget {
+        position: relative;
+        margin-bottom: 15px;
 
-    @media all and (min-width: $bp-med) {
-        margin-bottom: 0;
+        @media all and (min-width: $bp-med) {
+            margin-bottom: 0;
+        }
+
+        > h3 {
+            background: rgba(255, 255, 255, 0.85);
+            display: block;
+            padding: 10px 21px;
+            border-radius: 0 2px 0 0;
+            font-size: 16px;
+            font-weight: normal;
+            text-transform: uppercase;
+            position: relative;
+            line-height: 29px;
+            font-family: $font;
+            color: $purple;
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+            box-shadow: 2px 0 2px rgba(0,0,0,0.1), -2px 0 2px rgba(0,0,0,0.1);
+            font-weight: bold;
+
+            @media all and (min-width: $bp-med) {
+                background: rgba(255, 255, 255, 0.6);
+                cursor: pointer;
+                width: 93px;
+                text-align: center;
+                float: left;
+                border-radius: 2px 2px 0 0;
+                top: 4px;
+                font-size: 14px;
+                padding: 10px;
+
+                &.active {
+                    top: 0;
+                    padding-top: 14px;
+                    padding-bottom: 10px;
+                    background: rgba(255,255,255,0.85);
+                    border-radius: 2px 2px 0 0;
+                }
+
+                &.active ~ div {
+                    display: block;
+                }
+            }
+
+            @media all and (min-width: $bp-large-2) {
+                font-size: 16px;
+                width: 120px;
+                padding: 10px 21px;
+            }
+        }
+
+        > div {
+            z-index: 2;
+            overflow: hidden;
+            width: 100%;
+            font-size: 17px;
+            line-height: 25px;
+            padding: 25px;
+            top: 53px;
+            left: 0;
+            @extend .white-bg;
+            border-radius: 0 0 2px 2px;
+
+            @media all and (min-width: $bp-med) {
+                border-radius: 0 3px 0 0;
+                position: absolute;
+                display: none;
+            }
+        }
     }
 
-    > h3 {
-        background: rgba(255, 255, 255, 0.85);
-        display: block;
-        padding: 10px 21px;
-        border-radius: 0 2px 0 0;
+    .nlposts-ulist-container .nlposts-wrapper {
+
+        .thumbnails > li {
+            margin-top: 0;
+            width: 100%;
+        }
+
+        .thumbnail a > img {
+            padding: 0 8px 3px 0;
+            border: 0;
+            box-shadow: none;
+            -webkit-filter: none;
+            float: left;
+            opacity: 1;
+            border-radius: 0;
+        }
+
+        .nlposts-ulist-title a {
+            font-size: 16px;
+            color: $black;
+            font-family: $font;
+            padding-top: 4px;
+            line-height: 22px;
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.sidebar-news {
+    .widget {
+        overflow: hidden;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $purple;
+        padding-bottom: 12px;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    h3 {
         font-size: 16px;
         font-weight: normal;
         text-transform: uppercase;
@@ -19,78 +126,17 @@ section.widget {
         font-family: $font;
         color: $purple;
         text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
-        box-shadow: 2px 0 2px rgba(0,0,0,0.1), -2px 0 2px rgba(0,0,0,0.1);
         font-weight: bold;
-
-        @media all and (min-width: $bp-med) {
-            background: rgba(255, 255, 255, 0.6);
-            cursor: pointer;
-            width: 120px;
-            text-align: center;
-            float: left;
-            border-radius: 2px 2px 0 0;
-            top: 4px;
-
-            &.active {
-                top: 0;
-                padding-top: 14px;
-                padding-bottom: 10px;
-                background: rgba(255,255,255,0.85);
-                border-radius: 2px 2px 0 0;
-            }
-
-            &.active ~ div {
-                display: block;
-            }
-        }
+        margin-bottom: 12px;
     }
 
-    > div {
-        z-index: 2;
-        overflow: hidden;
-        width: 100%;
-        font-size: 17px;
-        line-height: 25px;
-        padding: 25px;
-        top: 53px;
-        left: 0;
-        @extend .white-bg;
-        border-radius: 0 0 2px 2px;
-
-        @media all and (min-width: $bp-med) {
-            border-radius: 0 3px 0 0;
-            position: absolute;
-            display: none;
-        }
-    }
-}
-
-.nlposts-ulist-container .nlposts-wrapper {
-
-    .thumbnails > li {
-        margin-top: 0;
-        width: 100%;
-    }
-
-    .thumbnail a > img {
-        padding: 0 8px 3px 0;
-        border: 0;
-        box-shadow: none;
-        -webkit-filter: none;
+    img.profile {
         float: left;
-        opacity: 1;
-        border-radius: 0;
+        margin-right: 10px;
+        margin-bottom: 6px;
     }
 
-    .nlposts-ulist-title a {
-        font-size: 16px;
-        color: $black;
-        font-family: $font;
-        padding-top: 4px;
-        line-height: 22px;
-
-        &:hover {
-            box-shadow: none;
-        }
+    ul {
+        list-style: none;
     }
 }

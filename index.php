@@ -32,7 +32,7 @@
     </div>
 
     <?php if (roots_display_sidebar()) : ?>
-      <aside class="sidebar large-4 medium-4 small-12 column white-bg" role="complementary">
+      <aside class="sidebar sidebar-news large-4 medium-4 small-12 column white-bg" role="complementary">
         <?php dynamic_sidebar('sidebar-news'); ?>
       </aside><!-- /.sidebar -->
     <?php endif; ?>

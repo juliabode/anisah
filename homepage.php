@@ -19,7 +19,7 @@ Template Name: Homepage
         </div>
     </div>
 
-    <aside class="sidebar large-5 medium-5 small-12 column" role="complementary">
+    <aside class="sidebar sidebar-home large-5 medium-5 small-12 column" role="complementary">
       <?php dynamic_sidebar('sidebar-primary'); ?>
     </aside>
 
