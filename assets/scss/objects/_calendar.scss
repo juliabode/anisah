@@ -90,3 +90,65 @@
 .qtip-content {
     font-size: 14px;
 }
+
+.gce-event-day {
+
+    .gce-feed {
+        border-left: 3px solid $pink;
+        @include transition(all, .2s, ease);
+        padding: 3px 8px;
+        margin-bottom: 20px;
+
+        &:hover,
+        &.active {
+            border-left-width: 7px;
+            background-color: rgba(230,34,116,0.2);
+        }
+    }
+}
+
+.gce-start-date,
+.gce-list-desc {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.gce-start-date {
+    width: 10%;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: -5px;
+    margin-right: 8px;
+}
+
+.gce-list-desc {
+    width: 85%;
+}
+
+.gce-list-event,
+.gce-tooltip-event {
+    background-color: transparent;
+    padding: 0;
+    font-style: italic;
+}
+
+.gce-list-time,
+.gce-list-location {
+    font-size: 13px;
+}
+
+.gce-list-text {
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.gce-list-title-calendar {
+    color: $pink;
+}
+
+.gce-event-info li {
+    border-top: 1px solid $purple;
+    margin-top: 3px;
+    padding-top: 2px;
+}

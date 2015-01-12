@@ -29,6 +29,15 @@ jQuery(document).ready( function($) {
     activeTab('section.widget:first-child > h3');
     jQuery('section.widget > h3').click( function() {
         activeTab(this);
-    })
+    });
+
+    var eventId = '';
+    jQuery('div.js-event-highlighter').hover( function() {
+        eventId = jQuery(this).data('eventId');
+        jQuery('div.js-event-highlighter[data-event-id="' + eventId + '"]').parent('.gce-feed').addClass('active');
+    }, function() {
+        eventId = jQuery(this).data('eventId');
+        jQuery('div.js-event-highlighter[data-event-id="' + eventId + '"]').parent('.gce-feed').removeClass('active');
+    });
 
 });
