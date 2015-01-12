@@ -46,6 +46,7 @@ header.banner {
     background-size: 100% 80%;
     margin-top: -135px;
     height: 330px;
+    border-radius: 330px;
 
     @media all and (min-width: $bp-small-2) {
         width: 66.66667%;
@@ -72,6 +73,7 @@ a.brand {
     transition: background 300ms ease-in;
     background-size: 50%;
     background-position: center 140px;
+    border-radius: 330px;
 
     @media all and (min-width: $bp-small) {
         background-size: 40%;
