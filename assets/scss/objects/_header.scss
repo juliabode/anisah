@@ -59,7 +59,7 @@ header.banner {
     }
 
     @media all and (min-width: $bp-large-2) {
-        background-size: initial;
+        background-size: auto;
         margin-top: -130px;
     }
 }

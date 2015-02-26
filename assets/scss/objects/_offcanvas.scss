@@ -54,7 +54,7 @@
     }
 
     @media all and (min-width: $bp-med) {
-        position: initial;
+        position: static;
         -webkit-transform: none;
         -moz-transform: none;
         -ms-transform: none;
