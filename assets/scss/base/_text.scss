@@ -10,3 +10,20 @@ q {
     margin: 15px;
     background: rgba(230, 34, 116, 0.2);
 }
+
+.content ul {
+    list-style: none;
+
+    li {
+        padding-left: 20px;
+        margin-bottom: 4px;
+
+        &::before {
+            content: "\f10c";
+            font-family: FontAwesome;
+            padding-right: 8px;
+            margin-left: -20px;
+            color: $pink;
+        }
+    }
+}
