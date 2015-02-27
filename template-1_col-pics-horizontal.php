@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: 1 Spalte und Bilder
+Template Name: 1 Spalte und horizontale Bilder
 */
 ?>
 
 <div class="row">
-    <div class="medium-8 small-12 column">
+    <div class="small-12 column">
         <div class="white-bg vines">
             <?php while (have_posts()) : the_post(); ?>
             <?php get_template_part('templates/page', 'header'); ?>
@@ -14,12 +14,12 @@ Template Name: 1 Spalte und Bilder
         </div>
     </div>
 
-    <div class="medium-4 small-12 column image-list">
+    <div class="small-12 column image-list">
         <?php if( have_rows('1-col-pics_pictures') ) { ?>
-        <ul>
+        <ul class="small-block-grid-2 medium-block-grid-4">
             <?php while ( have_rows('1-col-pics_pictures') ) { the_row(); ?>
                 <li>
-                    <?php $sub = get_sub_field('1-col-pics_picture'); ?>
+                    <?php $sub = get_sub_field('1-col-pics_picture');?>
                     <a href="<?php echo $sub['url']; ?>" rel="lightbox[pp_gal]"><img src="<?php echo $sub['url']; ?>"></a>
                 </li>
             <?php } ?>
