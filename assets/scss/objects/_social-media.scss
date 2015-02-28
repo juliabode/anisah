@@ -23,12 +23,20 @@
 
             &:hover {
                 opacity: 1;
-                text-decoration: none;
             }
 
             a {
                 width: 34px;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
+        }
+
+        .fa::before {
+            color: white;
+            line-height: 35px;
         }
     }
 }
@@ -36,9 +44,4 @@
 .social-media-wrapper {
     width: 100%;
     overflow: hidden;
-}
-
-.fa::before {
-    color: white;
-    line-height: 35px;
 }
