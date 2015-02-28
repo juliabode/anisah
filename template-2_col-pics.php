@@ -29,7 +29,7 @@ Template Name: 2 Spalten und Bilder
             <?php while ( have_rows('2-col-pics_pictures') ) { the_row(); ?>
                 <li>
                     <?php $sub = get_sub_field('2-col-pics_picture'); ?>
-                    <img src="<?php echo $sub['url']; ?>">
+                    <img src="<?php echo $sub['url']; ?>" rel="lightbox[pp_gal]">
                 </li>
             <?php } ?>
         </ul>
