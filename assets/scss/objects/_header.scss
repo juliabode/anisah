@@ -107,6 +107,10 @@ nav {
         list-style: none;
     }
 
+    .pos--rel {
+        position: static;
+    }
+
     @media all and (min-width: $bp-med) {
         font-weight: bold;
         text-align: center;
@@ -115,6 +119,10 @@ nav {
         ul {
             margin-bottom: 0 !important;
             padding: 0;
+        }
+
+        .pos--rel {
+            position: relative;
         }
 
         li {

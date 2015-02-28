@@ -2,7 +2,8 @@
   <div class="container">
 
     <nav class="collapse navbar-collapse" role="navigation">
-      <div class="row">
+      <div class="row pos--rel">
+        <?php get_template_part('templates/social_media_icons'); ?>
         <div class="left-off-canvas-menu medium-4 columns">
           <?php
             if (has_nav_menu('primary_navigation_left')) :
