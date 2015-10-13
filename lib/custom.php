@@ -68,7 +68,7 @@ add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 
 function add_lightbox_rel( $html ) {
     $pattern = '/<a(.*?)href="(.*?).(bmp|gif|jpeg|jpg|png)"(.*?)>/i';
-    $replacement = '<a$1href="$2.$3" rel=\'lightbox[pp_gal]\'$4>';
+    $replacement = '<a$1href="$2.$3" data-rel=\'lightbox-pp_gal\'$4>';
     $html = preg_replace( $pattern, $replacement, $html );
    return $html;
 }
